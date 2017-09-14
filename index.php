@@ -151,7 +151,7 @@ function doalert(checkboxElem) {
     <h2 class="w3-wide" id="Kontaktai" >KONTAKTAI</h2>
     <p> Turite klausimų ? Parašykite ! </p>
     <p style="float:left;text-align:left;"> Paulius Vizbara <br> 868572443 </p>
-  <!--<form style="color:black" action="" method="post">
+  <form style="color:black" action="" method="post">
       <input type="text" name="vardas" placeholder="Šuns vardas"><br>
       <input type="text" name="amzius" placeholder="Šuns amžius"><br>
       <input type="submit">
@@ -189,18 +189,18 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   }
   echo "Connected successfully";
 */
- /*$vardas = $_POST['vardas'];
+ $vardas = $_POST['vardas'];
  $amzius = $_POST['amzius'];
 
-  echo $vardas . " " . $amzius;*/
-  /*$sql = "INSERT INTO testavimas.sunys (Vardas, Amzius)
-  VALUES ('Reksas',15)";
+  echo $vardas . " " . $amzius;
+  $sql = "INSERT INTO testavimas.sunys (Vardas, Amzius)
+  VALUES ('Pukis',1)";
 
   if ($conn->query($sql) === TRUE) {
       echo "New record created successfully";
   } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
-  }*/
+  }
 
 
   ?>

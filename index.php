@@ -14,7 +14,20 @@
 <body>
 
 
+  <?php
+  $servername = "88.222.25.79";
+  $username = "justelis";
+  $password = "justelis";
 
+  // Create connection
+  $conn = new mysqli($servername, $username, $password);
+
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully";
+?>
 
   <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
@@ -28,9 +41,10 @@
 
 
   <div style="max-width:100%">
-    <img class="mySlides" src="https://i.pinimg.com/originals/2c/7d/1f/2c7d1ff79e461fe7c482f0ed70fadc4a.jpg" style="width:100%">
+    <img class="mySlides" src="first.jpg" style="width:100%">
     <img class="mySlides" src="https://i.ytimg.com/vi/V3cURkdd_pk/maxresdefault.jpg" style="width:100%">
     <img class="mySlides" src="https://wallpaperscraft.com/image/fencing_sports_white_background_79983_1920x1080.jpg" style="width:100%">
+
   </div>
 
   <!-- The Modal -->
@@ -75,6 +89,13 @@ function slideshow() {
     setTimeout(slideshow, 4000); // Change image every 2 seconds
 }
 
+function doalert(checkboxElem) {
+  if (checkboxElem.checked) {
+    alert ("hi");
+  } else {
+    alert ("bye");
+  }
+}
 
 </script>
 
@@ -105,6 +126,19 @@ function slideshow() {
        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
      We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
      <br>
+     <form id="myform">
+    <input type="checkbox" name="checkfield" id="g01-01"  onchange="doalert(this)"/>
+    </form>
+
+     <?php
+      $sql = "SELECT * FROM testavimas.sunys";
+      $result = $conn->query($sql);
+
+      while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["ID"]. " - Name: " . $row["Vardas"]. " " . $row["Amzius"]. "<br>";
+       }
+     ?>
+
      <br>
      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large">Login</button>
 
@@ -142,7 +176,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   </div>
 
   <?php
-  $servername = "localhost";
+  /*$servername = "localhost";
   $username = "root";
   $password = "gravity123";
 
@@ -154,7 +188,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       die("Connection failed: " . $conn->connect_error);
   }
   echo "Connected successfully";
-
+*/
  /*$vardas = $_POST['vardas'];
  $amzius = $_POST['amzius'];
 
@@ -168,7 +202,7 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       echo "Error: " . $sql . "<br>" . $conn->error;
   }*/
 
-  $conn->close();
+
   ?>
 
 </body>

@@ -7,37 +7,15 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-
-.Navigation {
- z-index: 5;
-}
- .Navigation ul {
-    width: 100%;
-    position: fixed;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-    background-color: black;
-}
- .Navigation li {
-
-    float: left;
+.Top {
+  position:fixed;
+  width:100%;
+  z-index:1;
+  top:0;
 }
 
- .Navigation li a,h3 {
-   margin-top: 15px;
-    font-size: 16px;
-    display: block;
-    color: white;
-    padding: 15px 24px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-.Navigation li a:hover {
-    background-color: grey;
-    color: white;
+.w3-bar a{
+  border-right: 1px white;
 }
 
 /* Viskas su pop-upu */
@@ -68,9 +46,9 @@ body {
 
 .BottomAnimation{
   position:relative;
-  animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}
+  animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1};
 }
-/*======================*/
+
 
 .Justify{
   text-align:justify;

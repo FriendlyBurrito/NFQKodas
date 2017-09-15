@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 
+<?php
+include("connect.php");
+?>
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 </head>
@@ -14,61 +18,73 @@
 <body>
 
 
-  <?php
-  $servername = "88.222.25.79";
-  $username = "justelis";
-  $password = "justelis";
 
-  // Create connection
-  $conn = new mysqli($servername, $username, $password);
 
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
-?>
-
-  <div class="w3-top">
+  <div class="Top">
   <div class="w3-bar w3-black w3-card-2">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Pradžia</a>
-    <a href="#Pagrindinis" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Treniruotės</a>
-    <a href="#Preke" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Placeholder</a>
+    <a href="#Pagrindinis" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Klubas</a>
+    <a href="#Preke" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Treniruotės</a>
     <a href="#Kontaktai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontaktai</a>
+    <a href="data.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Database</a>
   </div>
-</div>
+  </div>
+
 
 
 
   <div style="max-width:100%">
     <img class="mySlides" src="first.jpg" style="width:100%">
-    <img class="mySlides" src="https://i.ytimg.com/vi/V3cURkdd_pk/maxresdefault.jpg" style="width:100%">
-    <img class="mySlides" src="https://wallpaperscraft.com/image/fencing_sports_white_background_79983_1920x1080.jpg" style="width:100%">
+    <img class="mySlides" src="third.jpg" style="width:100%">
+    <img class="mySlides" src="second.jpg" style="width:100%">
 
   </div>
 
   <!-- The Modal -->
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 BottomAnimation" style="max-width:600px">
+  <div id="id01" class="Modal">
+    <div class="ModalContent w3-card-4 BottomAnimation" style="max-width:600px">
 
       <div class="w3-center"><br>
         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
-        <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
       </div>
 
-      <form class="w3-container" action="/action_page.php">
+      <form class="w3-container" action="add.php" method="POST">
         <div class="w3-section">
-          <label><b>Username</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
-          <label><b>Password</b></label>
-          <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
-          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+          <label><b>Jūsų vardas</b> <b style="color:red" > * </b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Vardas" name="vardas" required>
+          <label><b>Jūsų pavardė</b> <b style="color:red" > * </b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Pavardė" name="pavarde" required>
+          <label><b>Jūsų amžius</b> <b style="color:red" > * </b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Amžius" name="amzius" required>
+          <label><b>Jūsų telefonas</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Telefonas" name="telefonas" >
+          <label><b>Jūsų elektroninis paštas </b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Elektroninis paštas" name="pastas" >
+
+          <select class="w3-input w3-border w3-margin-bottom" name="diena" required>
+                <option value="" disabled="disabled" selected="selected">Pasirinkti užsimėmimų dieną</option>
+                <option value="Pirmadienis">Pirmadienis</option>
+                <option value="Trečiadienis">Trečiadienis</option>
+                  <option value="Penktadienis">Penktadienis</option>
+          </select>
+
+          <select class="w3-input w3-border w3-margin-bottom" name="laikas" required >
+                <option value="" disabled="disabled" selected="selected">Pasirinkti užsimėmimų laiką</option>
+                <option value="13:00">13:00</option>
+                <option value="17:00">17:00</option>
+                <option value="20:00">20:00</option>
+          </select>
+
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Registruotis</button>
         </div>
+
+
       </form>
 
+</div>
 
-    </div>
-  </div>
+</div>
+
 
 
  <script>
@@ -86,15 +102,7 @@ function slideshow() {
       myIndex = 1;
     }
     x[myIndex-1].style.display = "block";
-    setTimeout(slideshow, 4000); // Change image every 2 seconds
-}
-
-function doalert(checkboxElem) {
-  if (checkboxElem.checked) {
-    alert ("hi");
-  } else {
-    alert ("bye");
-  }
+    setTimeout(slideshow, 3000); // Change image every 2 seconds
 }
 
 </script>
@@ -103,9 +111,10 @@ function doalert(checkboxElem) {
 
 
    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="Pagrindinis">
-    <h2 class="w3-wide">PRADŽIA</h2>
-      <p  class="Justify">Žavitės kovų menais ? Norite išbandyti kovas kardais ? Puiku ! Siūlome Jums fechtavimosi pamokas Kaune, kur
-      galite Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    <h2 class="w3-wide">KLUBAS „GYNĖJAS“</h2>
+     <p class="w3-opacity"><i>Maišytų kovos menų savigynos užsiėmimai </i></p>
+     <br>
+      <p  class="Justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
       ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -126,21 +135,9 @@ function doalert(checkboxElem) {
        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
      We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
      <br>
-     <form id="myform">
-    <input type="checkbox" name="checkfield" id="g01-01"  onchange="doalert(this)"/>
-    </form>
-
-     <?php
-      $sql = "SELECT * FROM testavimas.sunys";
-      $result = $conn->query($sql);
-
-      while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["ID"]. " - Name: " . $row["Vardas"]. " " . $row["Amzius"]. "<br>";
-       }
-     ?>
 
      <br>
-     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large">Login</button>
+     <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large"> Registruotis </button>
 
     </div>
   </div>
@@ -149,15 +146,14 @@ function doalert(checkboxElem) {
 
     <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
     <h2 class="w3-wide" id="Kontaktai" >KONTAKTAI</h2>
-    <p> Turite klausimų ? Parašykite ! </p>
-    <p style="float:left;text-align:left;"> Paulius Vizbara <br> 868572443 </p>
-  <form style="color:black" action="" method="post">
-      <input type="text" name="vardas" placeholder="Šuns vardas"><br>
-      <input type="text" name="amzius" placeholder="Šuns amžius"><br>
-      <input type="submit">
-  </form>-->
-   <!-- <button onclick="document.getElementById('id01').style.display='block'"
-  class="w3-button">Open Modal</button>-->
+    <p class="w3-opacity"><i> Turite klausimų ? Kreipkitės ! </i></p>
+      <div style="float:left;text-align:left;">
+    <p > Paulius Vizbara <br> 868572443 </p>
+    </div>
+
+    <div style="float:right;text-align:right;margin-right:30px;">
+    <p> Paulius Vizbara <br> 868572443 </p>
+    </div>
 
   <div id="googleMap" style="width:100%;height:400px;"></div>
 
@@ -174,36 +170,6 @@ var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOQQ0jGFZ5fKLKyOjjX0rRESb5yjv3XE0&callback=myMap"></script>
 
   </div>
-
-  <?php
-  /*$servername = "localhost";
-  $username = "root";
-  $password = "gravity123";
-
-  // Create connection
-  $conn = new mysqli($servername, $username, $password);
-
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
-*/
- $vardas = $_POST['vardas'];
- $amzius = $_POST['amzius'];
-
-  echo $vardas . " " . $amzius;
-  $sql = "INSERT INTO testavimas.sunys (Vardas, Amzius)
-  VALUES ('Pukis',1)";
-
-  if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully";
-  } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-
-
-  ?>
 
 </body>
 

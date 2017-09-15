@@ -27,6 +27,7 @@ include("connect.php");
     <a href="#Preke" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Treniruotės</a>
     <a href="#Kontaktai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontaktai</a>
     <a href="data.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Database</a>
+    <a href="data2.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Database2</a>
   </div>
   </div>
 
@@ -55,7 +56,7 @@ include("connect.php");
           <label><b>Jūsų pavardė</b> <b style="color:red" > * </b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Pavardė" name="pavarde" required>
           <label><b>Jūsų amžius</b> <b style="color:red" > * </b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Amžius" name="amzius" required>
+          <input class="w3-input w3-border w3-margin-bottom" type="number" placeholder="Amžius" name="amzius" required>
           <label><b>Jūsų telefonas</b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Telefonas" name="telefonas" >
           <label><b>Jūsų elektroninis paštas </b></label>

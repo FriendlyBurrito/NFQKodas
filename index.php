@@ -114,26 +114,29 @@ function slideshow() {
     <h2 class="w3-wide">KLUBAS „GYNĖJAS“</h2>
      <p class="w3-opacity"><i>Maišytų kovos menų savigynos užsiėmimai </i></p>
      <br>
-      <p  class="Justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-       aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <h3 > "Padaryti galima viską. Sunkiausia būna sužinoti, kaip tai padaryti"  <br>
+        E.Alenas </h3>
+
+      <h3> Mūsų bendras klubo tikslas - stiprinti emocines, dvasines, psichologines ir fizines galias </h3>
+
    </div>
 
   <div class="w3-black">
      <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px"  id="Preke">
     <h2 class="w3-wide">TRENIRUOTĖS</h2>
-    <p class="Justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-     aute irure dolor in reprehenderit in voluptate velit esse cillum
-      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-       non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-     We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <p>Treniruočių metu jūs:</p>
+    <ul style="text-align:left">
+      <li> Suprasite, kaip galima išvengti konfliktų </li>
+
+      <li> Sužinosite, kaip tinkamai reaguoti stresinėje situacijoje </li>
+      <li> Išmoksite savigynos judesių, kurie padės jums apsiginti nuo stipresnio priešininko </li>
+      <li> Įgysite pasitikėjimo savimi bei naujų draugų </li>
+    </ul>
+
+      <p> Treniruotės trukmė: 60-90min. </p>
+      <p> Į treniruotes reikia atsinešti savo aprangą ir avalynę. </p>
+
+
      <br>
 
      <br>

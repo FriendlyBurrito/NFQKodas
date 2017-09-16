@@ -1,14 +1,18 @@
 <?php
-$servername = "localhost";
+$servername = "88.222.25.79";
 /*$servername = "localhost";*/
 $username = "justelis";
 $password = "justelis";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = @new mysqli($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    echo '<div class=" w3-red  w3-container" style="width:100%"">
+  <h3>Klaida!</h3>
+  <p>Nepavyko prisijungti prie MySQL.</p>
+</div>';
+
 }
 ?>

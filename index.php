@@ -28,7 +28,7 @@ include("connect.php");
     <a href="#Kontaktai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontaktai</a>
     <a href="data2.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Duombazė</a>
   </div>
-  </div>
+</div>
 
 
 

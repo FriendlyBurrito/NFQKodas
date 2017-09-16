@@ -26,7 +26,7 @@ include("connect.php");
     <a href="#Pagrindinis" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Klubas</a>
     <a href="#Preke" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Treniruotės</a>
     <a href="#Kontaktai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontaktai</a>
-    <a href="data2.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Duombazė</a>
+    <a href="loginindex.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Duomenų bazė</a>
   </div>
 </div>
 
@@ -114,10 +114,10 @@ function slideshow() {
     <h2 class="w3-wide">KLUBAS „GYNĖJAS“</h2>
      <p class="w3-opacity"><i>Maišytų kovos menų savigynos užsiėmimai </i></p>
      <br>
-      <h3 > "Padaryti galima viską. Sunkiausia būna sužinoti, kaip tai padaryti"  <br>
-        E.Alenas </h3>
-
-      <h3> Mūsų bendras klubo tikslas - stiprinti emocines, dvasines, psichologines ir fizines galias </h3>
+      <h3 > <i> "Padaryti galima viską. Sunkiausia būna sužinoti, kaip tai padaryti" </i> <br>
+        <b> E.Alenas </b> </h3>
+        <br> <br> <br>
+      <h3> Mūsų bendras klubo tikslas - stiprinti emocines, dvasines, psichologines ir fizines galias. </h3>
 
    </div>
 
@@ -127,12 +127,12 @@ function slideshow() {
     <p>Treniruočių metu jūs:</p>
     <ul style="text-align:left">
       <li> Suprasite, kaip galima išvengti konfliktų </li>
-
       <li> Sužinosite, kaip tinkamai reaguoti stresinėje situacijoje </li>
       <li> Išmoksite savigynos judesių, kurie padės jums apsiginti nuo stipresnio priešininko </li>
-      <li> Įgysite pasitikėjimo savimi bei naujų draugų </li>
+      <li> Įgysite pasitikėjimo savimi bei rasite naujų draugų </li>
     </ul>
 
+    <br>
       <p> Treniruotės trukmė: 60-90min. </p>
       <p> Į treniruotes reikia atsinešti savo aprangą ir avalynę. </p>
 
@@ -158,16 +158,18 @@ function slideshow() {
     <p> <b> Asmeninė informacija: </b> <br> Paulius Vizbara <br> tel.868572443 </p>
     </div>
 
-  <div id="googleMap" style="width:100%;height:400px;"></div>
+  <div id="map" style="width:100%;height:400px;"></div>
 
 <script>
 function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var myCenter = new google.maps.LatLng(54.896247,23.9338633);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 16};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
 }
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOQQ0jGFZ5fKLKyOjjX0rRESb5yjv3XE0&callback=myMap"></script>

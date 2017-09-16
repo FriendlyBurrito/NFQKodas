@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
@@ -13,7 +14,10 @@
 
 
 <?php
-
+    session_start();
+    if ( !isset($_SESSION['id'])){
+         header("Location: loginindex.php");
+    }
     include("connect.php");
 
     $sql = "SELECT * FROM testavimas.nariai";
@@ -43,6 +47,9 @@
     for ($page=1; $page<=$number_of_pages; $page++){
       echo '<a href="data2.php?page=' . $page . '" class="w3-bar-item w3-button w3-padding-large" >' . $page . '</a> ';
     }
+
+    echo '<a href="logout.php" class="w3-bar-item w3-button w3-padding-large" > ATSIJUNGTI </a> ';
+
 
     echo ' </div>';
     echo ' </div>';

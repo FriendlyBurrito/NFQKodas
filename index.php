@@ -20,14 +20,13 @@ include("connect.php");
 
 
 
-  <div class="Top">
+  <div class="w3-top">
   <div class="w3-bar w3-black w3-card-2">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Pradžia</a>
     <a href="#Pagrindinis" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Klubas</a>
     <a href="#Preke" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Treniruotės</a>
     <a href="#Kontaktai" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Kontaktai</a>
-    <a href="data.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Database</a>
-    <a href="data2.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Database2</a>
+    <a href="data2.php"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Duombazė</a>
   </div>
   </div>
 
@@ -149,11 +148,11 @@ function slideshow() {
     <h2 class="w3-wide" id="Kontaktai" >KONTAKTAI</h2>
     <p class="w3-opacity"><i> Turite klausimų ? Kreipkitės ! </i></p>
       <div style="float:left;text-align:left;">
-    <p > Paulius Vizbara <br> 868572443 </p>
+    <p > <b> Adresas: </b> <br> Kauno sporto halė <br> Perkūno al. 5, Kaunas 44221 </p>
     </div>
 
-    <div style="float:right;text-align:right;margin-right:30px;">
-    <p> Paulius Vizbara <br> 868572443 </p>
+    <div style="float:right;text-align:left;">
+    <p> <b> Asmeninė informacija: </b> <br> Paulius Vizbara <br> tel.868572443 </p>
     </div>
 
   <div id="googleMap" style="width:100%;height:400px;"></div>

@@ -28,7 +28,7 @@ $telefonas = $_POST['telefonas']*/
  $conn->close();
 
 
-/*header("location: index.php#Preke");*/
+header("location: index.php#Preke");
 
 
 

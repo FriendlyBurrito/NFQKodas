@@ -7,6 +7,9 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+ul b{
+  color: #357ace;
+}
 .Top {
   position:fixed;
   width:100%;

@@ -3,10 +3,9 @@ $servername = "88.222.25.79";
 $username = "paulius";
 $password = "paulius";
 
-// Create connection
+
 $conn = @new mysqli($servername, $username, $password);
 
-// Check connection
 if ($conn->connect_error) {
     echo '<div class=" w3-red  w3-container" style="width:100%"">
   <h3>Klaida!</h3>

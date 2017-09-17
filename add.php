@@ -11,9 +11,6 @@ $pastas = $_POST['pastas'];
 $diena = $_POST['diena'];
 $valanda = $_POST['laikas'];
 $data = date('Y-m-d');
-/*$pavarde = $_POST['amzius'];
-$pastas = $_POST['pastas'];
-$telefonas = $_POST['telefonas']*/
 
  echo $vardas . " " . $pavarde . " " . $amzius . " " . $telefonas . " " . $pastas . " " . $diena . " " . $laikas;
  $sql = "INSERT INTO testavimas.nariai (Vardas, Pavarde, Amzius, Telefonas, Epastas, Diena, Valanda, RegistracijosData)
